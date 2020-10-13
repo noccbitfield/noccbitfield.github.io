@@ -1,0 +1,8 @@
+#doorImage{
+	height: 455px;
+	width: 203px;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 10%;
+	background: url('../images/homedoorsmall.png') left center;
+}
