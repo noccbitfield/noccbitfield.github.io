@@ -1,0 +1,192 @@
+html{
+	scroll-behavior: smooth;
+	height:100%;
+}
+
+body{
+	margin: 0;	
+	font-family: sans-serif;
+	height:100%;
+}
+
+
+.titlesection{
+	background-image: url('../images/brain.jpg');
+	height: 600px;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	position: relative;
+	color:white;
+
+}
+
+
+.webtitle{
+	position: absolute;
+	font-weight: bold;
+	font-stretch: extra-expanded;
+	top: 30%;
+	left:10%;
+	font-size: 50px;
+}
+
+.webdesc{
+	position: absolute;
+	top: 45%;
+	left: 10%;
+	font-size: 20px;
+}
+
+.smalldesc{
+	position: absolute;
+	top: 52%;
+	left: 12%;
+	font-size: 10px;
+}
+
+.shareb{
+	position: absolute;
+	top: 60%;
+	left: 10%;
+	border: none;
+	padding: 12px;
+	font-size: 10px;
+	background-color: #FF0063;
+	color:white;
+}
+
+.shareb:hover{
+	background-color: #A40040;
+}
+
+.setupmsg{
+	line-height: 0;
+	position: relative;
+	font-weight: 600;
+	top:70px;
+	width: 700px;
+	margin-left: auto;
+	margin-right: auto;
+	color: #FF0063;
+
+}
+
+
+.userform{
+	position:relative;
+	top: 100px;
+	width: 500px;
+	margin-left: auto;
+	margin-right: auto;
+	font-size: 20px;
+}
+
+
+input{
+	width: 90%;
+	font-size:15px;
+	margin-top:5px;
+	margin-bottom: 20px;
+	padding:5px;
+	border: 2px solid lightgrey;
+
+}
+
+.recordb{
+	margin-top: 20px;
+	margin-left: 45%;
+	border: none;
+	padding: 12px;
+	font-size: 10px;
+	background-color: #FF0063;
+	color:white;
+
+}
+
+.recordb:hover{
+	background-color: #A40040;
+}
+
+
+
+.tableinfo{
+	position: relative;
+	top: 120px;
+	width: 725px;
+	height: 350px;
+	margin-right: auto;
+	margin-left: auto;
+	margin-top: 50px;
+	margin-bottom: 100px;
+}
+
+.sortbutton{
+	float: right;
+	margin-bottom:10px;
+	border: none;
+	background-color: #E998B8;
+	color: white;
+	padding: 5px;
+	font-size: 10px;
+	margin-left:2px;
+	margin-bottom: 10px;
+
+}
+
+.sortbutton:hover{
+	background-color: #C76C90;
+}
+
+
+.tablename{
+	margin: 0;
+	font-size: 20px;
+}
+
+table{
+	table-layout: fixed;
+
+}
+
+table th{
+	width: 25%;
+	overflow: hidden;
+	color: #FF0063;
+	height: 30px;
+	border:none;
+	border-bottom: 3px solid #FF0063;
+
+}
+
+table td{
+	border-collapse: collapse;
+	width: 25%;
+	word-wrap: break-word;
+	font-size: 12px;
+	height: 25px;
+	padding:2px;
+	border-bottom: 2px solid #E998B8;
+
+}
+
+main{
+	height:100%;
+
+}
+
+
+.bottombar{
+	position: relative;
+	border:1px solid black;
+	height:80px;
+	top: 100px;
+	width:100%;
+	text-align: center;
+	background-image: url('../images/bottombar.jpg');
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	color:white;
+}
+

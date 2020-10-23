@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang = "en" dir="ltr">
+<head>
+	<title>Asn2 Users</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" type="text/css" href="../css/userstyle.css">
+
+	<script src="../js/userscript.js"> </script>
+</head>
+
+
+<body>
+	<header>
+	</header>
+
+	<main><!--submit will send data to php file. but no submit-->
+		<section class = "titlesection">
+
+			<p style="position:absolute;  left:3%; font-weight: bold; font-size:20px">BRAINSHARE.</p>
+			<p style="position:absolute; top: 3%; right: 3%; font-size: 10px;">POWERED BY NOCCBITFIELD</p>
+			<h2 class="webtitle">BRAINSHARE.</h2>
+			<p class="webdesc">ONE BRAINCELL POWERING EVERYONE</p>
+			<p class="smalldesc">DUMB AND DUMB MAKES DUMBER, BUT TOGETHER WE ARE NOT LONELY</p>
+			<button class='shareb' onClick="document.getElementById('mark').scrollIntoView();">START SHARING</button>
+			<p id='mark' style="position:absolute; top: 85%;"></p>
+		</section>
+
+		<section class = "setupmsg" id="setupmsg">
+			<p style="font-size: 30px; margin-bottom:none">Start Sharing By Adding Users To Your Braincell</p>
+			<span style="font-size: 15px;">fill form below with braincell co-owners' information and click "BUTTON"</span>
+		</section>
+
+		<section class = "userform">
+			<form > 
+				<label for = "name">Name</label><br>	<!-- divide this into two compo?-->	
+				<input type = "textbox" placeholder="Enter Name" id="name" required>
+				<label for = "name"><abbr>*</abbr></label>
+			<br>
+				<label for = "email">Email</label><br> <!-- validate email-->
+				<input type = "email" id="email" placeholder="Enter Email" required>
+				<label for = "name"><abbr>*</abbr></label>
+			<br>
+				<label for = "bday">Birthday</label><br> <!-- calendar -->
+				<input type = "date" id="bday" required>
+				<label for = "name"><abbr>*</abbr></label>
+			</form>
+			<button class="recordb" onclick="recorddata()">BUTTON</button>
+		</section>
+		
+		<br>
+
+		<section class = "tableinfo">
+		<p class="tablename">Users:</p>
+		<button class="sortbutton" onclick="sorttable(0)">SORT by NAME</button><button class="sortbutton" onclick="sorttable(1)">SORT by EMAIL</button><button class="sortbutton" onclick="sorttable(2)">SORT by BIRTHDAY</button> 
+
+		<table cellspacing="0" cellpadding="0" border="0" width="725px">
+			<tr>
+	
+					<table cellspacing="0" cellpadding="1" width="698px">
+						<tr>
+							<th>Name</th>
+							<th>Email</th>
+							<th>Birthday</th>
+							<th>Age</th>
+						</tr>
+					</table>
+			
+			</tr>
+			<tr>
+				<section style = "width: 720px; height: 200px; overflow-y:auto;">
+					<table cellspacing="0" cellpadding="0" width="698px" >
+						<tbody id = "usertable"></tbody>
+					</table>
+				</section>
+			
+			</tr>
+			<tr>
+				<table cellspacing="0" cellpadding="1" width="698px">
+					<tr>
+						<td id = "ageavg" colspan = "4">The average age of users is: </td>
+					</tr>
+			</tr>
+		</table>
+
+		<p style="font-size:12px;" id="sortinfo"></p>
+		<p id="duptest"></p>
+		</section>
+
+		<section class="bottombar">
+			<p style="margin-top:30px;">&copy 2020 noccbitfield, inc. All Rights Reserved.</p>
+		</section>
+
+
+	</main>
+	
+</body>
+</html>
