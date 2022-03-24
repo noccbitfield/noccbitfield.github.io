@@ -10,7 +10,6 @@ body{
 }
 
 #topBar{
-	border:  1px solid black;
 	width:  100%;
 	position: absolute;
 	top:  0;
@@ -29,7 +28,6 @@ body{
 #pageWarning{
 	position: absolute;
 	top : 70px;
-	border:  1px solid black;
 	text-align: center;
 	width:  100%;
 }
@@ -38,7 +36,6 @@ body{
 	position:  absolute;
 	top:  150px;
 	left:  15%;
-	border:  1px solid black;
 	padding:  0;
 	margin:  0;
 
@@ -49,7 +46,6 @@ body{
 	position:  absolute;
 	width:  70%;
 	top:  170px;
-	border:  1px solid black;
 	left:  15%;
 }
 
