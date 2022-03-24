@@ -1,0 +1,58 @@
+html{
+	margin:  0;
+	padding:  0;
+
+}
+
+body{
+	margin:  0;
+	padding:  0;
+}
+
+#topBar{
+	border:  1px solid black;
+	width:  100%;
+	position: absolute;
+	top:  0;
+	text-align: center;
+
+	font-size: 35px;
+	padding:  0;
+	margin:  0;
+}
+
+#pageTitle{
+	padding:  0;
+	margin:  10px;
+}
+
+#pageWarning{
+	position: absolute;
+	top : 70px;
+	border:  1px solid black;
+	text-align: center;
+	width:  100%;
+}
+
+#projectSectionName{
+	position:  absolute;
+	top:  150px;
+	left:  15%;
+	border:  1px solid black;
+	padding:  0;
+	margin:  0;
+
+}
+
+
+#projectSection{
+	position:  absolute;
+	width:  70%;
+	top:  170px;
+	border:  1px solid black;
+	left:  15%;
+}
+
+table{
+	font-size: 12px;
+}
