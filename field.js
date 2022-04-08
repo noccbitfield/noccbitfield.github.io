@@ -138,6 +138,9 @@ function startField() {
     var canvas = document.getElementsByTagName("canvas");
 	
     if (mobileCheck == true){
+      var string = "window w: " + window.innerWidth + "canvas w: " +  parseInt($("canvas").css("width"),10);
+
+
       $("canvas").css("width", window.innerWidth);
       $("canvas").css("height", window.innerWidth/6);
       $("canvas").css("left", "0");
