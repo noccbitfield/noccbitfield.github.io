@@ -144,8 +144,8 @@ function startField() {
       $("#test").html(string);
 
 
-      $("canvas").css("width", window.innerWidth);
-      $("canvas").css("height", window.innerWidth/6);
+      $("canvas").css("width", window.innerWidth + "px");
+      $("canvas").css("height", window.innerWidth/6 + "px");
       $("canvas").css("left", "0");
     }
     
