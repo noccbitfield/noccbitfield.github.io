@@ -5,6 +5,13 @@ $(document).ready(function(){
   isMobile = mobileCheck();
   startField();
 
+  if (isMobile == true){
+    $("#pageTitle1").css("font-size", window.innerWidth * 0.04 + "px");
+    $(".smallTitle").css("font-size", window.innerWidth * 0.02 + "px");
+    $("#pageTitle2").css("font-size", window.innerWidth * 0.123 + "px");
+    $("#pageTitle2").css("letter-spacing", window.innerWidth * 0.03 + "px");
+  }
+
 
   readyGrass();
 
@@ -18,7 +25,43 @@ $(document).ready(function(){
     myFieldPiece.modX = 0;
   });
 
-  $("#tab").mouseenter(function(){
+  var lastScrollTop = 0;
+  $(window).scroll(function(event){
+    var st = $(this).scrollTop();
+    oldBottom = parseInt($("#grasstabSection").css("bottom"),10);
+    oldCanvasBottom = parseInt($("canvas").css("bottom"),10);
+    oldtabExtensionHeight = parseInt($("#tabExtension").css("height"),10);
+    if (st > lastScrollTop){
+      //scroll down      
+      if (oldBottom < 100){
+        $("#grasstabSection").css("bottom", oldBottom + 5 + "px");
+        $("#canvas").css("bottom", oldCanvasBottom + 5 + "px");
+        $("#tabExtension").css("height", oldtabExtensionHeight + 5 + "px");
+      }     
+    } else {
+      // scroll up
+      if (oldBottom > 20){
+        $("#grasstabSection").css("bottom", oldBottom - 5 + "px");
+        $("#canvas").css("bottom", oldCanvasBottom - 5 + "px");
+        $("#tabExtension").css("height", oldtabExtensionHeight - 5 + "px");
+      } 
+
+    }
+      
+    lastScrollTop = st;
+  });
+
+
+/*
+  0%{
+    bottom: 20px;
+  }
+  100%{
+    bottom: 0px;
+  }
+*/
+
+  /*$("#tab").mouseenter(function(){
     $("#grasstabSection").removeClass("withdraw");
     $("#grasstabSection").addClass("extend");
     $("canvas").removeClass("up");
@@ -41,7 +84,7 @@ $(document).ready(function(){
     $("html, body").animate({
         scrollTop: $("#garden").offset().top
       },1000);
-  });
+  });*/
 
 
 	
