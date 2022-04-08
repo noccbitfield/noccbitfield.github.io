@@ -2,6 +2,7 @@ html{
 	margin:  0;
 	padding:  0;
 	overflow-x: hidden;
+	scroll-behavior: smooth;
 
 }
 
@@ -11,10 +12,17 @@ body{
 
 	background-color: black;
 	color: white;
+	scroll-behavior: smooth;
 
 	overflow-x: hidden;
 
 
+}
+
+@media (max-width: 800px){
+	html, body{
+		overflow-x: hidden;
+	}
 }
 
 #topBar{
