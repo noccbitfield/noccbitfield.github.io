@@ -5,25 +5,249 @@ html{
 }
 
 body{
+	width:  100%;
+	margin:  100%;
 	margin:  0;
 	padding:  0;
+
+	background-color: black;
+	color: white;
 }
 
 #topBar{
 	width:  100%;
 	position: absolute;
-	top:  0;
+	top: calc(40% - 40px);
 	text-align: center;
+	overflow-x: hidden;
 
-	font-size: 35px;
+	font-size: 40px;
 	padding:  0;
 	margin:  0;
+
 }
 
-#pageTitle{
+#pageTitle1{
 	padding:  0;
-	margin:  10px;
+	font-size: 35px;
+	font-family: summerWriting;
+	font-weight: bold;
+	margin:  0;
+	margin-right: 10px;
+
+	display: inline-block;
+
 }
+
+.smallTitle{
+	padding:  0;
+	font-size: 20px;
+	font-family: summerWriting;
+	font-weight: bold;
+	margin:  0;
+	margin-right: 10px;
+
+	display: inline-block;
+
+}
+
+#pageTitle2{
+	margin:  0;
+	padding:  0;
+	font-family: miseryGymnast;
+	font-weight: bold;
+	letter-spacing: 25px;
+	font-size: 120px;
+
+	display: inline-block;
+}
+
+#pageContent{
+	position: absolute;
+	top:  calc(100% - 150px);
+	width:  100%;
+	height:  150px;
+
+
+}
+
+
+canvas{
+	width:  600px;
+	height:  100px;
+
+	bottom: 20px;
+	position: absolute;
+	left:  calc(50% - 300px);
+
+
+}
+
+canvas.down{
+	animation-name: Down;
+	animation-duration: 1s;
+	animation-timing-function: ease-out;
+	animation-fill-mode: forwards;
+
+}
+
+@keyframes Down{
+	0%{
+		bottom: 20px;
+	}
+	100%{
+		bottom: 0px;
+	}
+}
+
+canvas.up{
+	animation-name: Up;
+	animation-duration: 1s;
+	animation-timing-function: ease-out;
+	animation-fill-mode: forwards;
+
+}
+
+@keyframes Up{
+	0%{
+		bottom: 0px;
+	}
+	100%{
+		bottom: 20px;
+	}
+}
+
+
+#titleBody{
+	width:  100%;
+	height:  100%;
+	position: absolute;
+}
+
+
+#grasstabSection{
+	position: absolute;
+	width:  100%;
+	height: 0px;
+	bottom: 20px;
+
+	z-index:  1;
+
+}
+
+#tab{
+	position: absolute;
+	width:  100%;
+	height:  50px;
+	bottom: 0px;
+
+	z-index: 2;
+}
+
+#grasstabSection.extend{
+	animation-name: Extend;
+	animation-duration: 0.3s;
+	animation-timing-function: ease-out;
+	animation-fill-mode: forwards;
+}
+
+@keyframes Extend{
+	0%{
+		bottom: 20px;
+	}
+	100%{
+		bottom: 60px;
+	}
+}
+
+#grasstabSection.withdraw{
+	animation-name: Withdraw;
+	animation-duration: 1s;
+	animation-timing-function: ease-out;
+	animation-fill-mode: forwards;
+
+}
+
+@keyframes Withdraw{
+	0%{
+		bottom: 60px;
+	}
+	100%{
+		bottom: 20px;
+	}
+}
+
+
+#grassTab{
+  content: "";
+  position: absolute;
+  display: block;
+  height: 20px; /* 10n */
+  bottom: -20px;
+  left: 0;
+  right: 0;
+
+
+  background: linear-gradient( 45deg, #3f00de 33.333%, transparent 33.333%, transparent 66.667%, #3f00de 66.667%), 
+              linear-gradient( -45deg, #3f00de 33.333%, transparent 33.333%, transparent 66.667%, #3f00de 66.667%);
+  background-size: 16px 40px; /* 8px 20px */
+  /* toothSize doubleHeight */
+  background-position: 0 -20px;
+  /* horizontalOffset -height */
+}
+
+#tabExtension{
+	position: absolute;
+	width:  100%;
+	height:  0px;
+	bottom: 0;
+
+	background-color:  #3f00de;
+}
+
+
+#tabExtension.extend{
+	animation-name: tabExtend;
+	animation-duration: 0.3s;
+	animation-timing-function: ease-out;
+	animation-fill-mode: forwards;
+}
+
+@keyframes tabExtend{
+	0%{
+		height: 0px;
+	}
+	100%{
+		height: 40px;
+	}
+}
+
+#tabExtension.withdraw{
+	animation-name:  tabWithdraw;
+	animation-duration:  1.5s;
+	animation-time-function:  ease-out;
+	animation-fill-mode:  forwards;
+}
+
+@keyframes tabWithdraw{
+	0%{
+		height:  40px;
+	}
+	100%{
+		height:  0px;
+	}
+}
+
+#garden{
+	width:  100%;
+	height:  500px;
+	position: absolute;
+	bottom: -500px;
+
+	background-color:  #3f00de;
+}
+
+
 
 #pageWarning{
 	position: absolute;
@@ -31,6 +255,7 @@ body{
 	text-align: center;
 	width:  100%;
 }
+
 
 #projectSectionName{
 	position:  absolute;
@@ -43,6 +268,7 @@ body{
 
 
 #projectSection{
+	border:  1px solid white;
 	position:  absolute;
 	width:  70%;
 	top:  170px;
@@ -51,4 +277,9 @@ body{
 
 table{
 	font-size: 12px;
+}
+
+a:link, a:visited{
+	color:  yellow;
+	font-weight: bold;
 }
