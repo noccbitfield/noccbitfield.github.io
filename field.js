@@ -12,8 +12,8 @@ $(document).ready(function(){
     $("#pageTitle2").css("letter-spacing", window.innerWidth * 0.03 + "px");
 
     
-    $("canvas").css("width", window.innerWidth + "px");
-    $("canvas").css("height", window.innerWidth/6 + "px");
+    $("canvas").css("width", "100%");
+    $("canvas").css("height",  parseInt($("canvas").css("width"),10)/6 + "px");
     $("canvas").css("left", "0");
 
     var string = "MOBILE | window w: " + window.innerWidth + " canvas w: " +  parseInt($("canvas").css("width"),10);
