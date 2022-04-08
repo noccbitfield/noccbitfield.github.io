@@ -16,19 +16,29 @@ $(document).ready(function(){
     $("canvas").css("height",  parseInt($("canvas").css("width"),10)/6 + "px");
     $("canvas").css("left", "0");
 
-    var string = "MOBILE | window w: " + window.innerWidth + " canvas w: " +  parseInt($("canvas").css("width"),10);
-    $("#test").html(string);
+    /*var string = "MOBILE | window w: " + window.innerWidth + " canvas w: " +  parseInt($("canvas").css("width"),10);
+    $("#test").html(string);*/
   }
 
 
   readyGrass();
 
-  $("body").mousedown(function (){
+  /*$("body").mousedown(function (){
     nudgeMyPiece(event);
     console.log(window.innerWidth);
   });
 
   $("body").mouseup(function(){
+    myFieldPiece.isStill = true;
+    myFieldPiece.modX = 0;
+  });*/
+
+  $("body").on("pointerdown", function (event){
+    nudgeMyPiece(event);
+    console.log(window.innerWidth);
+  });
+
+  $("body").on("pointerup", function(event){
     myFieldPiece.isStill = true;
     myFieldPiece.modX = 0;
   });
@@ -60,39 +70,6 @@ $(document).ready(function(){
   });
 
 
-/*
-  0%{
-    bottom: 20px;
-  }
-  100%{
-    bottom: 0px;
-  }
-*/
-
-  /*$("#tab").mouseenter(function(){
-    $("#grasstabSection").removeClass("withdraw");
-    $("#grasstabSection").addClass("extend");
-    $("canvas").removeClass("up");
-    $("canvas").addClass("down");
-    $("#tabExtension").removeClass("withdraw");
-    $("#tabExtension").addClass("extend");
-  });
-
-  $("#tab").mouseleave(function(){
-    $("#grasstabSection").removeClass("extend");
-    $("#grasstabSection").addClass("withdraw");
-    $("canvas").removeClass("down");
-    $("canvas").addClass("up");
-    $("#tabExtension").removeClass("extend");
-    $("#tabExtension").addClass("withdraw");
-  });
-
-  $("#tab").click(function(){
-    console.log("tab clicked!");
-    $("html, body").animate({
-        scrollTop: $("#garden").offset().top
-      },1000);
-  });*/
 
 
 	
