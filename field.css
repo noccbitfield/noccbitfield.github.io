@@ -1,6 +1,7 @@
 html{
 	margin:  0;
 	padding:  0;
+	overflow-x: hidden;
 
 }
 
@@ -12,11 +13,12 @@ body{
 	color: white;
 
 	overflow-x: hidden;
-	
+
 
 }
 
 #topBar{
+	border:  1px solid white;
 	width:  100%;
 	position: absolute;
 	top: calc(40% - 40px);
@@ -30,6 +32,7 @@ body{
 }
 
 #pageTitle1{
+	border:  1px solid white;
 	padding:  0;
 	font-size: 35px;
 	font-family: summerWriting;
@@ -42,6 +45,7 @@ body{
 }
 
 .smallTitle{
+	border:  1px solid white;
 	padding:  0;
 	font-size: 20px;
 	font-family: summerWriting;
@@ -54,6 +58,7 @@ body{
 }
 
 #pageTitle2{
+	border:  1px solid white;
 	margin:  0;
 	padding:  0;
 	font-family: miseryGymnast;
