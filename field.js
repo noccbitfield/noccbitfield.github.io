@@ -136,9 +136,12 @@ function startField() {
     myFieldPiece = new component(300*0.69, 300, "red", 796, 0);
 
     var canvas = document.getElementsByTagName("canvas");
+    var string = "window w: " + window.innerWidth + " canvas w: " +  parseInt($("canvas").css("width"),10);
+      $("#test").html(string);
 	
     if (mobileCheck == true){
-      var string = "window w: " + window.innerWidth + "canvas w: " +  parseInt($("canvas").css("width"),10);
+      var string = "MOBILE | window w: " + window.innerWidth + " canvas w: " +  parseInt($("canvas").css("width"),10);
+      $("#test").html(string);
 
 
       $("canvas").css("width", window.innerWidth);
