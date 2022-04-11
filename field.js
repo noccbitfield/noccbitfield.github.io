@@ -19,22 +19,14 @@ $(document).ready(function(){
     $("canvas").css("height",  parseInt($("canvas").css("width"),10)/6 + "px");
     $("canvas").css("left", "0");
 
-    /*var string = "MOBILE | window w: " + window.innerWidth + " canvas w: " +  parseInt($("canvas").css("width"),10);
-    $("#test").html(string);*/
+    $(".menuOption").css("margin-left","10px");
+    $(".menuOption").css("margin-right","10px");
+
   }
 
 
   readyGrass();
 
-  /*$("body").mousedown(function (){
-    nudgeMyPiece(event);
-    console.log(window.innerWidth);
-  });
-
-  $("body").mouseup(function(){
-    myFieldPiece.isStill = true;
-    myFieldPiece.modX = 0;
-  });*/
 
   $(".menuOption").on("click", function(){
     if (this.innerHTML != "ILLUSTS"){
@@ -144,17 +136,7 @@ function startField() {
     var canvas = document.getElementsByTagName("canvas");
     var string = "window w: " + window.innerWidth + " canvas w: " +  parseInt($("canvas").css("width"),10);
       $("#test").html(string);
-	
-    /*if (mobileCheck == true){
-      var string = "MOBILE | window w: " + window.innerWidth + " canvas w: " +  parseInt($("canvas").css("width"),10);
-      $("#test").html(string);
 
-
-      $("canvas").css("width", window.innerWidth + "px");
-      $("canvas").css("height", window.innerWidth/6 + "px");
-      $("canvas").css("left", "0");
-    }*/
-    
 
 
 }
