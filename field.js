@@ -2,6 +2,9 @@
 
 var isMobile = false;
 $(document).ready(function(){
+  $("#about").css("visibility", "hidden");
+  $("#projectSection").css("visibility", "visible");
+
   isMobile = mobileCheck();
   startField();
 
@@ -33,9 +36,27 @@ $(document).ready(function(){
     myFieldPiece.modX = 0;
   });*/
 
+  $(".menuOption").on("click", function(){
+    if (this.innerHTML != "ILLUSTS"){
+      $(".menuOption").css("text-decoration", "");
+      $(this).css("text-decoration", "underline wavy 1px");
+      $(this).css("text-underline-offset", "2px");
+    }
+    
+
+    if (this.innerHTML == "SOFTWARE"){
+      $("#about").css("visibility", "hidden");
+      $("#projectSection").css("visibility", "visible");
+    } 
+    else if (this.innerHTML == "ABOUT"){
+      $("#about").css("visibility", "visible");
+      $("#projectSection").css("visibility", "hidden");
+
+    }
+  });
+
   $("body").on("pointerdown", function (event){
     nudgeMyPiece(event);
-    console.log(window.innerWidth);
   });
 
   $("body").on("pointerup", function(event){

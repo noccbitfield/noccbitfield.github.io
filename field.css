@@ -31,6 +31,36 @@ body{
 	}
 }
 
+
+#menu{
+	padding:  0;
+	margin:  0;
+	top:  50px;
+	width:  100%;
+	font-family: summerWriting;
+	text-align: center;
+	height: 25px;
+}
+
+.menuOption{
+	padding:  0;
+	margin:  0;
+	font-size: 18px;
+	display: inline-block;
+
+	margin-left: 50px;
+	margin-right:  50px;
+}
+
+.menuOption:hover{
+	text-decoration: underline wavy 1px;
+	text-underline-offset: 2px;
+
+
+}
+
+
+
 #topBar{
 	width:  100%;
 	position: absolute;
@@ -257,9 +287,11 @@ canvas.up{
 
 #garden{
 	width:  100%;
-	height:  500px;
+	height:  800px;
 	position: absolute;
-	bottom: -500px;
+	bottom: -800px;
+
+	font-family: summerWriting;
 
 	background-color:  #3f00de;
 }
@@ -271,6 +303,7 @@ canvas.up{
 	top : 70px;
 	text-align: center;
 	width:  100%;
+	font-size: 15px;
 }
 
 
@@ -299,3 +332,26 @@ a:link, a:visited{
 	color:  yellow;
 	font-weight: bold;
 }
+
+#about{
+	position: absolute;
+	top:  10%;
+	width: 100%;
+	height: 80%;
+
+	text-align: center;
+
+
+}
+
+#aboutSelf{
+	padding:  0;
+	margin:  0;
+	margin-top:  150px;
+}
+
+.menuPage{
+	visiblity: hidden;
+
+}
+
