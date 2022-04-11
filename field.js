@@ -29,8 +29,9 @@ $(document).ready(function(){
 
 
   $(".menuOption").on("click", function(){
+    $(".menuOption").css("text-decoration", "");
     if (this.innerHTML != "ILLUSTS"){
-      $(".menuOption").css("text-decoration", "");
+      
       $(this).css("text-decoration", "underline wavy 1px");
       $(this).css("text-underline-offset", "2px");
     }
